@@ -1,22 +1,28 @@
 # 📦 Supply Chain Risk Predictor
 
-An AI-powered web application that analyzes real-world events and predicts their impact on supply chains using LLMs and rule-based risk scoring.
+An AI-powered web application that analyzes real-world events and predicts their impact on supply chains using Large Language Models (LLMs) and rule-based risk scoring.
+
+---
+
+## 🌐 Live Demo
+
+👉 https://supply-chain-risk-predictor-01.streamlit.app/
 
 ---
 
 ## 🚀 Features
 
 * 🔍 **Event Extraction (LLM-based)**
-  Extracts structured information (event, location, industry, severity) from unstructured news text.
+  Converts unstructured news into structured data (event, location, industry, severity)
 
 * ⚠️ **Risk Prediction Engine**
-  Computes risk score based on severity and affected industry.
+  Calculates risk score based on severity and affected industry
 
 * 🛠️ **Mitigation Suggestions (LLM-based)**
-  Generates actionable steps to reduce supply chain disruption.
+  Generates actionable steps to minimize disruption
 
 * 🎨 **Interactive UI (Streamlit)**
-  Clean and user-friendly interface for real-time analysis.
+  Simple and responsive interface for real-time analysis
 
 ---
 
@@ -35,36 +41,26 @@ An AI-powered web application that analyzes real-world events and predicts their
 ```
 supply_chain_app/
 │
-├── app.py                 # Streamlit UI
-├── llm.py                 # LLM configuration
-├── event_extraction.py    # Extract event details
-├── risk_predictor.py      # Compute risk score
-├── mitigation.py          # Suggest mitigation actions
-├── .env                   # API keys
-├── requirements.txt       # Dependencies
+├── app.py
+├── llm.py
+├── event_extraction.py
+├── risk_predictor.py
+├── mitigation.py
+├── .env
+├── requirements.txt
 ```
 
 ---
 
 ## ⚙️ Installation
 
-1. Clone the repository:
-
 ```bash
-git clone https://github.com/your-username/supply-chain-risk-predictor.git
-cd supply-chain-risk-predictor
-```
+git clone : https://github.com/Bedant03/Supply-Chain-Risk-Predictor.git
+cd supply-Chain-Risk-Predictor
 
-2. Create environment (recommended):
+conda create -p venv python==3.14 -y
+conda activate venv
 
-```bash
-conda create -n sc_env python=3.10 -y
-conda activate sc_env
-```
-
-3. Install dependencies:
-
-```bash
 pip install -r requirements.txt
 ```
 
@@ -80,16 +76,29 @@ GROQ_API_KEY=your_api_key_here
 
 ---
 
-## ▶️ Run the App
+## ▶️ Run Locally
 
 ```bash
 streamlit run app.py
 ```
 
-Open in browser:
+---
+
+## ☁️ Deployment (Streamlit Cloud)
+
+1. Push your project to GitHub
+2. Go to https://share.streamlit.io
+3. Click **New App**
+4. Select your repository and set:
+
+   * Main file: `app.py`
+
+### 🔐 Add Secrets
+
+In Streamlit Cloud → Settings → Secrets:
 
 ```
-http://localhost:8501
+GROQ_API_KEY = "your_api_key_here"
 ```
 
 ---
@@ -97,7 +106,7 @@ http://localhost:8501
 ## 🧪 Example Input
 
 ```
-A major port strike in Los Angeles has halted cargo operations, causing severe delays in global shipments.
+A major port strike in Los Angeles has halted cargo operations, causing delays in global shipments.
 ```
 
 ---
@@ -108,36 +117,27 @@ A major port strike in Los Angeles has halted cargo operations, causing severe d
 * **Location:** Los Angeles
 * **Industry:** Logistics
 * **Risk Score:** 90/100 (High Risk)
-* **Actions:**
 
-  1. Monitor supply chain disruptions
-  2. Diversify suppliers
-  3. Prepare for delays
+**Suggested Actions:**
+
+1. Monitor supply chain disruptions
+2. Diversify suppliers
+3. Prepare for delays
 
 ---
 
 ## 🔥 Future Improvements
 
 * 📊 Dashboard with charts
-* 🌍 Geographical visualization (maps)
+* 🌍 Map-based visualization
 * 📂 Batch processing (CSV upload)
 * 🌐 Real-time news integration
 
 ---
 
-## 🤝 Contributing
-
-Pull requests are welcome. For major changes, please open an issue first.
-
----
-
-## 📜 License
-
-This project is open-source and available under the MIT License.
-
----
-
 ## 👨‍💻 Author
 
-Your Name
-GitHub: https://github.com/your-username
+Bedant Behera
+GitHub: https://github.com/bedant03
+
+---
